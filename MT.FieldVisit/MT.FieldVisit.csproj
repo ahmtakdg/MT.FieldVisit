@@ -101,6 +101,7 @@
     <Compile Include="Constants\FieldVisitFields.cs" />
     <Compile Include="Constants\FieldVisitStatus.cs" />
     <Compile Include="Plugins\FieldVisitGuardPlugin.cs" />
+    <Compile Include="Plugins\GetMyTasksPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
