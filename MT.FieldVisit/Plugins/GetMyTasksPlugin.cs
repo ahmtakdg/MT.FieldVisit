@@ -24,10 +24,10 @@ namespace MT.FieldVisit.Plugins
             try
             {
                 // --- Input ---
-                if (!context.InputParameters.Contains("UserEmail"))
+                if (!context.InputParameters.Contains("mt_UserEmail"))
                     throw new InvalidPluginExecutionException("UserEmail input parameter is required.");
 
-                var userEmail = context.InputParameters["UserEmail"] as string;
+                var userEmail = context.InputParameters["mt_UserEmail"] as string;
                 if (string.IsNullOrWhiteSpace(userEmail))
                     throw new InvalidPluginExecutionException("UserEmail cannot be empty.");
 
