@@ -104,7 +104,7 @@ namespace MT.FieldVisit.Plugins
                 // --- 4. Serialize to JSON ---
                 var json = SerializeTasksToJson(taskResult.Entities);
 
-                context.OutputParameters["TasksJson"] = json;
+                context.OutputParameters["mt_TasksJson"] = json;
             }
             catch (InvalidPluginExecutionException)
             {
