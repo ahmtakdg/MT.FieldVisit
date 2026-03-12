@@ -86,7 +86,12 @@ namespace MT.FieldVisit.Plugins
                 ownerFilter.AddCondition("ownerid", ConditionOperator.Equal, userId);
 
                 if (teamIds.Count > 0)
-                    ownerFilter.AddCondition("ownerid", ConditionOperator.In, teamIds.ToArray());
+                {
+                    var teamCondition = new ConditionExpression("ownerid", ConditionOperator.In);
+                    foreach (var teamId in teamIds)
+                        teamCondition.Values.Add(teamId);
+                    ownerFilter.Conditions.Add(teamCondition);
+                }
 
                 taskQuery.Criteria.AddFilter(ownerFilter);
 
